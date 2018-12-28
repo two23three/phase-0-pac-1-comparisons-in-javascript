@@ -3,7 +3,7 @@
 ## Learning Goals
 
 * Identify equality operators
-* Compare numbers with the relational operators
+* Compare numbers with relational operators
 
 ## Introduction
 
@@ -27,7 +27,7 @@ loose operators will return true even if the data types aren't the same. A
 string '42' is _not_ the same as an integer 42. As developers we want to ensure
 that not only are the values the same, but also the data types.
 
-### Strict Equality Operator `===` and `!==`
+### Strict Equality Operator `===` and Strict Inequality Operator `!==`
 
 The **strict equality operator** returns `true` if two values are equal _without
 performing type conversions_. Even if the values on both sides of the operator
@@ -58,6 +58,7 @@ This is logical and accurate!
 
 The **strict inequality operator** returns `true` if two values are _not_ equal
 and does not perform type conversions:
+
 ```js
 9000 !== 9001
 // => true
@@ -71,9 +72,10 @@ and does not perform type conversions:
 
 ***You should prefer `===` and `!==` for comparisons***.
 
-### Loose Equality and Inequality Operators `==` and `!=`
+### Loose Equality Operator `==` and Loose Inequality Operator `!=`
 
 The **loose equality operator** returns `true` if two values are equal:
+
 ```js
 42 == 42
 // => true
@@ -120,7 +122,7 @@ different** data types — are equivalent.
 
 ***You should prefer `===` and `!==` for comparisons***.
 
-## Compare numbers with the relational operators
+## Compare Numbers with Relational Operators
 
 There are four relational operators built in to JavaScript:
 - **greater than** (`>`),
@@ -138,6 +140,7 @@ These operators work in a very similar way to the equality operators:
 However, beware of type conversion when comparing non-numbers against numbers.
 For instance, when a string is compared with a number, the JavaScript engine
 tries to convert the string to a number:
+
 ```js
 88 > '9'
 // => true
@@ -145,6 +148,7 @@ tries to convert the string to a number:
 
 If the engine can't convert the string into a number, the comparison will always
 return `false`:
+
 ```js
 88 >= 'hello'
 // => false
@@ -157,6 +161,7 @@ Strings are compared with other strings lexicographically, meaning
 character-by-character from left-to-right. The following returns `false` because
 the Unicode value of `8`, the first character in `88`, is less than the Unicode
 value of `9`.
+
 ```js
 '88' > '9'
 // => false
@@ -173,7 +178,7 @@ to a number first](https://gomakethings.com/converting-strings-to-numbers-with-v
 JavaScript contains both equality and comparison operators that assist us in
 writing functional code. Make sure you're preferring the strict equality
 operators, and only comparing numerical values with the relational operators,
-and you'll avoid those annoying troubleshooting errors that can drive you crazy!
+and you'll avoid those annoying troubleshooting errors that can be time consuming!
 
 ## Resources
 
