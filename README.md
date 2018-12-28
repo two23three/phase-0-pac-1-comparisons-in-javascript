@@ -27,12 +27,13 @@ loose operators will return true even if the data types aren't the same. A
 string '42' is _not_ the same as an integer 42. As developers we want to ensure
 that not only are the values the same, but also the data types.
 
-### `===` Strict Equality Operator
+### Strict Equality Operator `===` and `!==`
 
 The **strict equality operator** returns `true` if two values are equal _without
 performing type conversions_. Even if the values on both sides of the operator
 look similar (e.g., `'42' === 42`), the `===` operator will only return `true`
 if the data types also match:
+
 ```js
 42 === 42
 // => true
@@ -53,9 +54,7 @@ null === undefined
 // => false
 ```
 
-This is logical and accurate! ***Prefer `===` for comparisons***.
-
-### `!==` Strict Inequality Operator
+This is logical and accurate! 
 
 The **strict inequality operator** returns `true` if two values are _not_ equal
 and does not perform type conversions:
@@ -70,9 +69,9 @@ and does not perform type conversions:
 // => true
 ```
 
-***You should prefer `!==` for comparisons***.
+***You should prefer `===` and `!==` for comparisons***.
 
-### Loose Equality and Inequality Operators `==` and `!==`
+### Loose Equality and Inequality Operators `==` and `!=`
 
 The **loose equality operator** returns `true` if two values are equal:
 ```js
