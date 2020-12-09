@@ -3,29 +3,30 @@
 ## Learning Goals
 
 * Identify equality operators
-* Compare numbers with relational operators
+* Compare numbers using relational operators
 
 ## Introduction
 
 By now in JavaScript, we should be able to perform basic mathematical functions
 and assign values to variables, but how do we check to see if a value is what
-we're expecting? In addition to performing arithmetic and assigning value to
-variables, JavaScript has additional operators for comparing values. The value
-returned by a comparison is **always** `true` or `false`.
+we're expecting? In addition to the operators we use to perform arithmetic and
+assign values to variables, JavaScript also has operators for comparing values.
+The value returned by a comparison is **always** `true` or `false`.
 
 ## Identify equality operators
 
-There are four equality operators built into JavaScript:
+JavaScript includes four equality operators:
 
-- **strict equality operator** (`===`)
-- **strict inequality operator** (`!==`)
-- **loose equality operator** (`==`)
-- **loose inequality operator** (`!=`)
+* **strict equality operator** (`===`)
+* **strict inequality operator** (`!==`)
+* **loose equality operator** (`==`)
+* **loose inequality operator** (`!=`)
 
-When writing JavaScript, you strongly prefer the **strict** operators, as the
-loose operators will return true even if the data types aren't the same. A
-string '42' is _not_ the same as an integer 42. As developers we want to ensure
-that not only are the values the same, but also the data types.
+When writing JavaScript, you should **always** use the **strict** operators
+unless you absolutely cannot get the results you need using them. The reason for
+this is the loose operators will return true even if the data types aren't the
+same, which can result in unexpected behavior and bugs that can be difficult to
+track down.
 
 ### Strict Equality Operator `===` and Strict Inequality Operator `!==`
 
@@ -54,10 +55,10 @@ null === undefined
 // => false
 ```
 
-This is logical and accurate! 
+This is logical and accurate!
 
 The **strict inequality operator** returns `true` if two values are _not_ equal
-and does not perform type conversions:
+_without_ performing type conversions:
 
 ```js
 9000 !== 9001
@@ -117,24 +118,31 @@ two values are _not_ equal, performing type conversions as necessary:
 ```
 
 This is confusing and inaccurate! It makes no sense that the string `'0'` is
-equal to the boolean `false` or that `null` and `undefined` — two **completely
-different** data types — are equivalent.
+equal to the boolean `false` or that `null` and `undefined` &mdash; two **completely
+different** data types &mdash; are equivalent.
 
 ***You should prefer `===` and `!==` for comparisons***.
 
 ## Compare Numbers with Relational Operators
 
-There are four relational operators built in to JavaScript:
-- **greater than** (`>`),
-- **greater than or equals** (`>=`)
-- **less than** (`<`)
-- **less than or equals** (`<=`)
+JavaScript includes four relational operators:
 
-These operators work in a very similar way to the equality operators:
+* **greater than** (`>`)
+* **greater than or equals** (`>=`)
+* **less than** (`<`)
+* **less than or equals** (`<=`)
+
+The behavior of these operators is consistent with the meaning of the corresponding symbols in mathematics:
 
 ```js
 88 > 9
 // => true
+
+88 >= 88
+// => true
+
+88 < 9
+// => false
 ```
 
 However, beware of type conversion when comparing non-numbers against numbers.
@@ -166,6 +174,7 @@ value of `9`.
 '88' > '9'
 // => false
 ```
+
 If you aren't sure what data type you are going to be receiving, but you still
 need to compare them, make sure that you tell JavaScript to [convert the string
 to a number first](https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/), and then compare.
@@ -177,13 +186,13 @@ to a number first](https://gomakethings.com/converting-strings-to-numbers-with-v
 
 JavaScript contains both equality and comparison operators that assist us in
 writing functional code. Make sure you're preferring the strict equality
-operators, and only comparing numerical values with the relational operators,
-and you'll avoid those annoying troubleshooting errors that can be time consuming!
+operators, and only comparing numerical values using the relational operators,
+and you'll avoid annoying errors that can be time consuming to troubleshoot!
 
 ## Resources
 
-- MDN
-  + [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-  + [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-- [JavaScript Equality Table](http://dorey.github.io/JavaScript-Equality-Table/)
-- [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
+* MDN
+  * [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+  * [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+* [JavaScript Equality Table](http://dorey.github.io/JavaScript-Equality-Table/)
+* [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
