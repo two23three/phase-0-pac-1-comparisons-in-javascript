@@ -13,6 +13,15 @@ we're expecting? In addition to the operators we use to perform arithmetic and
 assign values to variables, JavaScript also has operators for comparing values.
 The value returned by a comparison is **always** `true` or `false`.
 
+**Note:** JavaScript includes both _strict_ and _loose_ comparison operators.
+When writing JavaScript, you should strongly prefer the **strict** operators.
+The reason for this is the loose operators will return true even if the data
+types aren't the same, which can result in unexpected behavior and bugs that can
+be difficult to track down. Even if you find you need to compare two values of
+different data types, you should avoid using loose operators. You will be better
+off converting one of the variables to the other's data type first, then
+comparing them using a strict operator.
+
 ## Identify equality operators
 
 JavaScript includes four equality operators:
@@ -22,11 +31,8 @@ JavaScript includes four equality operators:
 * **loose equality operator** (`==`)
 * **loose inequality operator** (`!=`)
 
-When writing JavaScript, you should **always** use the **strict** operators
-unless you absolutely cannot get the results you need using them. The reason for
-this is the loose operators will return true even if the data types aren't the
-same, which can result in unexpected behavior and bugs that can be difficult to
-track down.
+These operators allow us to compare values and determine whether they are the
+same.
 
 ### Strict Equality Operator `===` and Strict Inequality Operator `!==`
 
