@@ -1,4 +1,4 @@
-# JavaScript Fundamentals: Comparisons
+# Comparisons in JavaScript
 
 ## Learning Goals
 
