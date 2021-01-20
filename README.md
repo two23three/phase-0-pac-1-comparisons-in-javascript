@@ -12,14 +12,10 @@ create them. In this lesson we'll learn about comparison operators, which enable
 us to check to see if a value is what we're expecting. Follow along with the
 examples below in [repl.it](https://repl.it/languages/javascript).
 
-**Note:** JavaScript includes both _strict_ and _loose_ comparison operators.
-When writing JavaScript, you should strongly prefer the **strict** operators.
-The reason for this is the loose operators will return true even if the data
-types aren't the same, which can result in unexpected behavior and bugs that can
-be difficult to track down. Even if you find you need to compare two values of
-different data types, you should avoid using loose operators. You will be better
-off converting the data type of one of the variables so they have the same type,
-then comparing them using a strict operator.
+> **Note:** JavaScript includes both _strict_ and _loose_ comparison operators. When writing JavaScript, you should strongly prefer the **strict** operators.
+The reason for this is the loose operators will return true even if the data types aren't the same, which can result in unexpected behavior and bugs that can
+be difficult to track down. Even if you find you need to compare two values of different data types, you should avoid using loose operators. You will be better
+off converting the data type of one of the variables so they have the same type, then comparing them using a strict operator.
 
 ## Identify equality operators
 
@@ -185,8 +181,7 @@ If you aren't sure what data type you are going to be receiving, but you still
 need to compare them, make sure that you tell JavaScript to [convert the string
 to a number first](https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/), and then compare.
 
-***Top Tip***: Stick to comparing _numerical_ values with the relational
-operators and you'll be golden.
+> **Top Tip**: Stick to comparing _numerical_ values with the relational operators and you'll be golden.
 
 ## Conclusion
 
