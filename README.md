@@ -119,8 +119,8 @@ two values are _not_ equal, performing type conversions as necessary:
 ```
 
 This is confusing and inaccurate! It makes no sense that the string `'0'` is
-equal to the boolean `false` or that `null` and `undefined` &mdash; two **completely
-different** data types &mdash; are equivalent.
+equal to the boolean `false` or that `null` and `undefined` — two **completely
+different** data types — are equivalent.
 
 ***You should prefer `===` and `!==` for comparisons***.
 
@@ -187,7 +187,7 @@ to a number first](https://gomakethings.com/converting-strings-to-numbers-with-v
 
 JavaScript contains both equality and relational operators that we can use in
 writing code to compare two values. The resulting statements are _Boolean
-expressions_ &mdash; they always return `true` or `false`.
+expressions_ — they always return `true` or `false`.
 
 Make sure you're using the strict equality operators whenever possible, and only
 comparing numerical values using the relational operators, and you'll avoid
