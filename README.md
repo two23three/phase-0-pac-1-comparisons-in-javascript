@@ -127,7 +127,9 @@ This is confusing and inaccurate! It makes no sense that the string `'0'` is
 equal to the boolean `false` or that `null` and `undefined` — two **completely
 different** data types — are equivalent.
 
-**_You should prefer `===` and `!==` for comparisons_**.
+**_You should prefer `===` and `!==` for comparisons_**. There are [a lot of
+rules][equality table] that JavaScript follows when performing type coercion
+using the `==` operator, and it's not worth keeping track of them all.
 
 ## Compare Numbers with Relational Operators
 
@@ -184,9 +186,12 @@ value of `9`.
 
 If you aren't sure what data type you are going to be receiving, but you still
 need to compare them, make sure that you tell JavaScript to [convert the string
-to a number first](https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/), and then compare.
+to a number
+first](https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/),
+and then compare.
 
-> **Top Tip**: Stick to comparing _numerical_ values with the relational operators and you'll be golden.
+> **Top Tip**: Stick to comparing _numerical_ values with the relational
+> operators and you'll be golden.
 
 ## Conclusion
 
@@ -203,5 +208,7 @@ annoying errors that can be time consuming to troubleshoot!
 - MDN
   - [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
   - [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-- [JavaScript Equality Table](http://dorey.github.io/JavaScript-Equality-Table/)
+- [JavaScript Equality Table][equality table]
 - [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
+
+[equality table]: https://dorey.github.io/JavaScript-Equality-Table/
