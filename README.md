@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-* Identify equality operators
-* Compare numbers using relational operators
+- Identify equality operators
+- Compare numbers using relational operators
 
 ## Introduction
 
@@ -12,19 +12,24 @@ create them. In this lesson we'll learn about comparison operators, which enable
 us to check to see if a value is what we're expecting. Follow along with the
 examples below in [repl.it](https://repl.it/languages/javascript).
 
-> **Note:** JavaScript includes both _strict_ and _loose_ comparison operators. When writing JavaScript, you should strongly prefer the **strict** operators.
-The reason for this is the loose operators will return true even if the data types aren't the same, which can result in unexpected behavior and bugs that can
-be difficult to track down. Even if you find you need to compare two values of different data types, you should avoid using loose operators. You will be better
-off converting the data type of one of the variables so they have the same type, then comparing them using a strict operator.
+> **Note:** JavaScript includes both _strict_ and _loose_ comparison operators.
+> When writing JavaScript, you should strongly prefer the **strict** operators.
+
+The reason for this is the loose operators will return true even if the data
+types aren't the same, which can result in unexpected behavior and bugs that can
+be difficult to track down. Even if you find you need to compare two values of
+different data types, you should avoid using loose operators. You will be better
+off converting the data type of one of the variables so they have the same type,
+then comparing them using a strict operator.
 
 ## Identify equality operators
 
 JavaScript includes four equality operators:
 
-* **strict equality operator** (`===`)
-* **strict inequality operator** (`!==`)
-* **loose equality operator** (`==`)
-* **loose inequality operator** (`!=`)
+- **strict equality operator** (`===`)
+- **strict inequality operator** (`!==`)
+- **loose equality operator** (`==`)
+- **loose inequality operator** (`!=`)
 
 These operators allow us to compare values and determine whether they are the
 same.
@@ -37,22 +42,22 @@ look similar (e.g., `'42' === 42`), the `===` operator will only return `true`
 if the data types also match:
 
 ```js
-42 === 42
+42 === 42;
 // => true
 
-42 === '42'
+42 === "42";
 // => false
 
-true === 1
+true === 1;
 // => false
 
-'0' === false
+"0" === false;
 // => false
 
-null === undefined
+null === undefined;
 // => false
 
-' ' === 0
+" " === 0;
 // => false
 ```
 
@@ -72,14 +77,14 @@ _without_ performing type conversions:
 // => true
 ```
 
-***You should prefer `===` and `!==` for comparisons***.
+**_You should prefer `===` and `!==` for comparisons_**.
 
 ### Loose Equality Operator `==` and Loose Inequality Operator `!=`
 
 The **loose equality operator** returns `true` if two values are equal:
 
 ```js
-42 == 42
+42 == 42;
 // => true
 ```
 
@@ -88,19 +93,19 @@ changing the string `'42'` into the number `42`) that makes the two values
 equal:
 
 ```js
-42 == '42'
+42 == "42";
 // => true
 
-true == 1
+true == 1;
 // => true
 
-'0' == false
+"0" == false;
 // => true
 
-null == undefined
+null == undefined;
 // => true
 
-' ' == 0
+" " == 0;
 // => true
 ```
 
@@ -122,28 +127,28 @@ This is confusing and inaccurate! It makes no sense that the string `'0'` is
 equal to the boolean `false` or that `null` and `undefined` — two **completely
 different** data types — are equivalent.
 
-***You should prefer `===` and `!==` for comparisons***.
+**_You should prefer `===` and `!==` for comparisons_**.
 
 ## Compare Numbers with Relational Operators
 
 JavaScript includes four relational operators:
 
-* **greater than** (`>`)
-* **greater than or equals** (`>=`)
-* **less than** (`<`)
-* **less than or equals** (`<=`)
+- **greater than** (`>`)
+- **greater than or equals** (`>=`)
+- **less than** (`<`)
+- **less than or equals** (`<=`)
 
 The behavior of these operators is consistent with the meaning of the
 corresponding symbols in mathematics:
 
 ```js
-88 > 9
+88 > 9;
 // => true
 
-88 >= 88
+88 >= 88;
 // => true
 
-88 < 9
+88 < 9;
 // => false
 ```
 
@@ -152,7 +157,7 @@ For instance, when a string is compared with a number, the JavaScript engine
 tries to convert the string to a number:
 
 ```js
-88 > '9'
+88 > "9";
 // => true
 ```
 
@@ -160,10 +165,10 @@ If the engine can't convert the string into a number, the comparison will always
 return `false`:
 
 ```js
-88 >= 'hello'
+88 >= "hello";
 // => false
 
-88 <= 'hello'
+88 <= "hello";
 // => false
 ```
 
@@ -173,7 +178,7 @@ the Unicode value of `8`, the first character in `88`, is less than the Unicode
 value of `9`.
 
 ```js
-'88' > '9'
+"88" > "9";
 // => false
 ```
 
@@ -195,8 +200,8 @@ annoying errors that can be time consuming to troubleshoot!
 
 ## Resources
 
-* MDN
-  * [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-  * [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-* [JavaScript Equality Table](http://dorey.github.io/JavaScript-Equality-Table/)
-* [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
+- MDN
+  - [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+  - [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [JavaScript Equality Table](http://dorey.github.io/JavaScript-Equality-Table/)
+- [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
