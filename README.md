@@ -10,7 +10,7 @@
 Now that we know what _Boolean expressions_ are we'll start learning how to
 create them. In this lesson we'll learn about comparison operators, which enable
 us to check to see if a value is what we're expecting. Follow along with the
-examples below in [repl.it](https://repl.it/languages/javascript).
+examples below in [replit][].
 
 **Note:** JavaScript includes both _strict_ and _loose_ comparison operators.
 When writing JavaScript, you should strongly prefer the **strict** operators.
@@ -212,3 +212,4 @@ annoying errors that can be time consuming to troubleshoot!
 - [freeCodeCamp Forum — JavaScript Comparison Operators](https://forum.freecodecamp.org/t/javascript-comparison-operators/14660)
 
 [equality table]: https://dorey.github.io/JavaScript-Equality-Table/
+[replit]: https://replit.com/languages/javascript
